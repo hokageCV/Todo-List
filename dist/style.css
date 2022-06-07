@@ -1,10 +1,17 @@
-/* -------------- CSS Reset -------------- */
+/* ========== CSS Reset ================= */
 :root{
     --black: #040c0e ;
-    --darkGrey: #132226 ;
-    --lightGrey: #525b56 ;
+    --lightBlack: #132226 ;
+    --lightGrey: #bcbcbf ;
     --brown: #be9063 ;
     --dirtWhite: #a4978e ;
+    --chocolateBrown: #623412 ;
+
+    --red: #fe4a49 ;
+    --blue: #2ab7ca  ;
+    --yellow: #fed766 ;
+    --veryLightGrey: #e6e6ea ;
+    --almostWhite: #f4f4f8 ;
 }
 *,
 *::before,
@@ -21,7 +28,129 @@ body{
     font-family:  Arial, sans-serif;
     width: 100%;
     color: blanchedalmond;
-    background:  var(--dirtWhite);
+    background:  var(--veryLightGrey);
    /* background:  #5d6e70; */
 }
-/* ------------------------------------------ */
+/* ==================================== */
+
+/* ============ header =============== */
+.header{
+    background-color: var(--red);
+}
+.header h4{
+    font-size: 300%;
+    color: var(--lightBlack);
+    text-align: center;
+}
+
+/* ============ side bar & list container =============== */
+.container{
+   display: flex;
+}
+
+/* ============ side bar =============== */
+.sidebar{
+    background-color: var(--lightGrey);
+    width: 250px;
+    height: 100vh ;
+
+    font-size: 250%;
+
+    color: var(--yellow);
+
+     /* stick footer at bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== first collection ========= */
+.general-task-container{
+    margin: 20px;
+}
+.general-task-container h6{
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* ====== projects ========= */
+.projects-container{}
+.projects-container button{
+    font-size: 90%;
+    border: none;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--dirtWhite);
+    
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+
+    margin: 0 20px ;
+    margin-top: 50px;
+}
+.projects-container button:hover{
+    color: #fff;
+    border: 1px solid rgba(223,190,106,0);
+    color: olive;
+    background-position: 99% 50%;
+}
+/* ====== footer ========= */
+footer{
+    font-size: 50%;
+    margin: 10px auto;
+
+    /* stick footer at bottom */
+    margin-top: auto;
+}
+
+/* ============ list area =============== */
+.list-area{
+    margin: 20px;
+}
+.list-area button{
+    /* https://www.cssportal.com/css3-button-generator/ dwara banaya gaya hai */
+    font-family: 'trebuchet ms';
+    font-weight: bold;
+    color: var(--lightBlack) !important;
+    font-size: 17px;
+    text-shadow: 1px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 0px groove var(--black);
+    background: var(--blue);
+}
+.list-area button:hover{
+    color: var(--red) !important;
+    background: var(--almostWhite);
+}
+
+/* ====== new task form ========= */
+.form-container{
+    border-radius: 26px; 
+    border: 4px solid var(--red);
+    margin: 20px;
+    
+
+    background: var(--yellow);
+}
+.form-container h6{
+    font-size: 200%;
+    color: var(--lightBlack) ;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.form-container label{
+    margin-top: 20px;
+    font-size: 150%;
+    color: var(--chocolateBrown);
+    font-weight: 600;
+}
+
+/* ====== ToDos ========= */
+.toDos{
+    margin: 20px;
+}

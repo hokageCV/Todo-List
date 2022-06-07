@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="main.js"></script> -->
 
     <title>ToDo List</title>
@@ -22,24 +23,75 @@
                         <!-- list area  -->
     
     <!-- header -->
-    <div class="outer-shell">
+    <div class="header">
         <!-- <div class="harburger stay-left"></div> -->
-        <h4>ToDo</h4>
+        <h4>ToDo List</h4>
     </div>
 
     <!-- container to sidebar & list area  -->
     <div class="container">
         <!-- sidebar -->
         <div class="sidebar">
+
             <!-- first collection of tasks -->
-            <div class="general-task-container"></div>
+            <div class="general-task-container">
+                <h6>Today</h6>
+                <h6>This Week</h6>
+                <h6>All Tasks</h6>
+            </div>
+
             <!-- projects -->
-            <div class="projects-container"></div>
+            <div class="projects-container">
+                <button class="fa fa-plus">Add Project</button>
+            </div>
+
             <!-- footer -->
-            <footer></footer>
+            <footer>
+                <p>Made by hokageCV  |  <a href="https://github.com/hokageCV" target="_blank" >Github</a></p>
+            </footer>
+
         </div>
         <!-- list area -->
-        <div class="list-area"></div>
+        <div class="list-area">
+            <!-- new task -->
+            <div class="new-task-container">
+                <button>New Task</button>
+            </div>
+            <!-- input form -->
+            <div class="form-container">
+                <form >
+                    <h6>New Task</h6>
+    
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="eg, Sleep" id="title" name="title" required>
+    
+                    <label for="description">Description</label>
+                    <input type="text" placeholder=" Sleep on time" id="description" name="description">
+    
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+    
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority" required >
+                        <option value="medium">Set Priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+    
+                    <label for="project">Project</label>
+                    <select name="project" id="project" >
+                        <option value="demoProject">Assign Project</option>
+                        <option value="demoProject">Demo Project</option>
+                    </select>
+
+                    <input type="submit" id="submit">
+    
+                </form>
+            </div>
+            <!-- ToDos -->
+            <div class="toDos"></div>
+        </div>
     </div>
 
 </body>
