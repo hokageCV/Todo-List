@@ -5,7 +5,7 @@ const toDosContainer = document.querySelector('.toDos');
 
 const renderToDos= ( function(){
 
-    // let retrievedData = localStorage.getItem("AllTasksList");
+    let retrievedData = localStorage.getItem("AllTasksList");
     let updatedTasksKiList = JSON.parse(retrievedData); 
 
     updatedTasksKiList.forEach( (task)=>{
