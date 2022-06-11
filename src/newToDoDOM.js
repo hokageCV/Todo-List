@@ -1,10 +1,14 @@
-import { tasksKiList } from "./newToDoObject";
+// import { tasksKiList } from "./newToDoObject";
 
 // outer shell of all tasks
 const toDosContainer = document.querySelector('.toDos');
 
 const renderToDos= ( function(){
-    tasksKiList.forEach( (task)=>{
+
+    // let retrievedData = localStorage.getItem("AllTasksList");
+    let updatedTasksKiList = JSON.parse(retrievedData); 
+
+    updatedTasksKiList.forEach( (task)=>{
         let aTask = document.createElement('div');
 
 
@@ -31,5 +35,6 @@ const renderToDos= ( function(){
 
     });
 })();
+
 
 export { renderToDos };

@@ -1,4 +1,14 @@
-let tasksKiList = [];
+
+let tasksKiList = [
+    {
+        task:"cleam room",
+        desc:"clean properly",
+        date:"2022-6-20",
+        priority:"High",
+        project: ""
+
+    },
+];
 
 const addTask = (ev)=>{
     ev.preventDefault();  //to stop the form submitting
@@ -10,7 +20,7 @@ const addTask = (ev)=>{
         date: document.getElementById('date').value,
         priority: document.getElementById('priority').value,
         project: document.getElementById('project').value
-    };
+    }
 
     // add new task to tasks ki list
     tasksKiList.push( task );
@@ -20,6 +30,9 @@ const addTask = (ev)=>{
 
     //saving to localStorage
     localStorage.setItem('AllTasksList', JSON.stringify(tasksKiList) );
+
+
 };
 
-export { tasksKiList, addTask } ;
+
+export { tasksKiList , addTask} ;
