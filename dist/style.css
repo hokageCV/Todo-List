@@ -86,7 +86,7 @@ body{
     cursor: grabbing;
 
     margin: 0 20px ;
-    margin-top: 50px;
+    margin-top: 50px ;
 }
 .projects-container button:hover{
     color: #fff;
