@@ -1,16 +1,17 @@
+import { renderToDos } from "./newToDoDOM";
 
-let tasksKiList = [
-    {
+
+
+let tasksKiList = [{
         task:"cleam room",
         desc:"clean properly",
         date:"2022-6-20",
         priority:"High",
         project: ""
-
     },
 ];
 
-const addTask = (ev)=>{
+function addTask(ev){
     ev.preventDefault();  //to stop the form submitting
 
     // make new task
@@ -31,8 +32,8 @@ const addTask = (ev)=>{
     //saving to localStorage
     localStorage.setItem('AllTasksList', JSON.stringify(tasksKiList) );
 
-
-};
+    renderToDos();
+}
 
 
 export { tasksKiList , addTask} ;
