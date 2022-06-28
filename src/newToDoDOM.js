@@ -9,7 +9,7 @@ const renderToDos= ( function(){
     let updatedTasksKiList = JSON.parse(retrievedData); 
 
     updatedTasksKiList.forEach( (task)=>{
-        let aTask = document.createElement('div');
+        let aTask = document.createElement('div') ;
 
 
         let title = document.createElement('p');
