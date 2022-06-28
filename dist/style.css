@@ -136,7 +136,7 @@ footer{
 }
 .form-container h6{
     font-size: 200%;
-    color: var(--lightBlack) ;
+    color: var(--lightBlack);
 }
 .form-container form{
     display: flex;
