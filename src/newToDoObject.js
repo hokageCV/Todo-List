@@ -1,4 +1,10 @@
+import { renderToDos } from "./newToDoDOM";
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> asynced
 let tasksKiList = [{
         task:"cleam room",
         desc:"clean properly",
@@ -8,7 +14,7 @@ let tasksKiList = [{
     },
 ];
 
-const addTask = (ev)=>{
+function addTask(ev){
     ev.preventDefault();  //to stop the form submitting
 
     // make new task
@@ -28,7 +34,13 @@ const addTask = (ev)=>{
 
     //saving to localStorage
     localStorage.setItem('AllTasksList', JSON.stringify(tasksKiList) );
+<<<<<<< HEAD
 };
+=======
+
+    renderToDos();
+}
+>>>>>>> asynced
 
 
 export { tasksKiList , addTask} ;

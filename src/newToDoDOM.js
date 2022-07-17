@@ -1,10 +1,11 @@
-// import { tasksKiList } from "./newToDoObject";
+import { initiate } from "./inititeLocalStorage";
+
+initiate();
 
 // outer shell of all tasks
 const toDosContainer = document.querySelector('.toDos');
 
-const renderToDos= ( function(){
-
+function renderToDos(){
     let retrievedData = localStorage.getItem("AllTasksList");
     let updatedTasksKiList = JSON.parse(retrievedData); 
 
@@ -32,9 +33,8 @@ const renderToDos= ( function(){
         aTask.appendChild(project);
 
         toDosContainer.appendChild(aTask);
-
     });
-})();
+};
 
 
 export { renderToDos };
