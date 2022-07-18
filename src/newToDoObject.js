@@ -1,18 +1,7 @@
 import { renderToDos } from "./newToDoDOM";
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> asynced
-let tasksKiList = [{
-        task:"cleam room",
-        desc:"clean properly",
-        date:"2022-6-20",
-        priority:"High",
-        project: ""
-    },
-];
+let retrievedList = localStorage.getItem("AllTasksList");   
+let tasksKiList = JSON.parse(retrievedList); 
 
 function addTask(ev){
     ev.preventDefault();  //to stop the form submitting
@@ -22,25 +11,23 @@ function addTask(ev){
         task: document.getElementById('title').value,
         desc: document.getElementById('description').value,
         date: document.getElementById('date').value,
-        priority: document.getElementById('priority').value,
+        priority: document.getElementById('priority').value,   
         project: document.getElementById('project').value
     }
 
-    // add new task to tasks ki list
+    // // add new task to tasks ki list
+    console.log( tasksKiList );
     tasksKiList.push( task );
+    console.log( tasksKiList );
 
     // rest the form
     document.querySelector('form').reset();
 
     //saving to localStorage
     localStorage.setItem('AllTasksList', JSON.stringify(tasksKiList) );
-<<<<<<< HEAD
-};
-=======
 
     renderToDos();
-}
->>>>>>> asynced
+};
 
 
-export { tasksKiList , addTask} ;
+export { addTask} ;

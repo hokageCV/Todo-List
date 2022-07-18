@@ -156,3 +156,7 @@ footer{
     font-size: 150%;
     color: var(--brown);
 }
+
+.task{
+    margin:20px;
+}
