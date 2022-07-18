@@ -73,7 +73,8 @@ body{
 }
 
 /* ====== projects ========= */
-.projects-container{}
+.projects-container{} 
+
 .projects-container button{
     font-size: 90%;
     border: none;
@@ -156,6 +157,7 @@ footer{
     font-size: 150%;
     color: var(--brown);
 }
+
 
 .task{
     margin:20px;
