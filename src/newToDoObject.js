@@ -16,11 +16,9 @@ function addTask(ev){
     }
 
     // // add new task to tasks ki list
-    console.log( tasksKiList );
     tasksKiList.push( task );
-    console.log( tasksKiList );
 
-    // rest the form
+    // reset the form
     document.querySelector('form').reset();
 
     //saving to localStorage
@@ -28,6 +26,5 @@ function addTask(ev){
 
     renderToDos();
 };
-
 
 export { addTask} ;
